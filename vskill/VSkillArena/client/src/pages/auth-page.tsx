@@ -1,0 +1,170 @@
+import { useState } from "react";
+import { useAuth } from "@/hooks/use-auth";
+import { useLocation } from "wouter";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { insertUserSchema } from "@shared/schema";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Trophy, ArrowRight, BookOpen, Users } from "lucide-react";
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
+
+export default function AuthPage() {
+  const { user, loginMutation, registerMutation } = useAuth();
+  const [_, setLocation] = useLocation();
+  const [isLogin, setIsLogin] = useState(true);
+  const [showOTP, setShowOTP] = useState(false);
+  const [otp, setOTP] = useState("");
+
+  // Redirect if already logged in
+  if (user) {
+    setLocation("/");
+    return null;
+  }
+
+  const form = useForm({
+    resolver: zodResolver(insertUserSchema),
+    defaultValues: {
+      username: "",
+      password: "",
+    },
+  });
+
+  const onSubmit = async (data: any) => {
+    if (isLogin) {
+      loginMutation.mutate(data);
+    } else {
+      registerMutation.mutate(data);
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col lg:flex-row">
+      {/* Form Section */}
+      <div className="flex-1 flex items-center justify-center p-8">
+        <Card className="w-full max-w-md p-8">
+          <div className="flex items-center gap-2 mb-8">
+            <Trophy className="h-8 w-8 text-primary" />
+            <h1 className="text-2xl font-bold">VSkill Arena</h1>
+          </div>
+
+          {!showOTP ? (
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <FormField
+                  control={form.control}
+                  name="username"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Username</FormLabel>
+                      <FormControl>
+                        <Input {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="password"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Password</FormLabel>
+                      <FormControl>
+                        <Input type="password" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <Button 
+                  type="submit" 
+                  className="w-full"
+                  disabled={loginMutation.isPending || registerMutation.isPending}
+                >
+                  {isLogin ? "Login" : "Register"}
+                </Button>
+              </form>
+            </Form>
+          ) : (
+            <div className="space-y-6">
+              <p className="text-sm text-center">Enter the verification code sent to your email</p>
+              <InputOTP
+                value={otp}
+                onChange={(value) => setOTP(value)}
+                maxLength={6}
+                render={({ slots }) => (
+                  <InputOTPGroup className="gap-2">
+                    {slots.map((slot, index) => (
+                      <InputOTPSlot key={index} {...slot} index={index} />
+                    ))}
+                  </InputOTPGroup>
+                )}
+              />
+              <Button className="w-full" onClick={() => setShowOTP(false)}>
+                Verify
+              </Button>
+            </div>
+          )}
+
+          <div className="mt-6 text-center">
+            <Button
+              variant="link"
+              onClick={() => setIsLogin(!isLogin)}
+              className="text-sm"
+            >
+              {isLogin ? "Need an account? Register" : "Already have an account? Login"}
+            </Button>
+          </div>
+        </Card>
+      </div>
+
+      {/* Hero Section */}
+      <div className="flex-1 bg-primary p-8 text-primary-foreground flex flex-col justify-center">
+        <div className="max-w-md mx-auto">
+          <h2 className="text-4xl font-bold mb-6">Welcome to VSkill Arena</h2>
+          <p className="text-lg mb-8">
+            Your journey to mastery begins here. Learn, create, and connect with a
+            community of learners.
+          </p>
+
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
+              <BookOpen className="h-8 w-8" />
+              <div>
+                <h3 className="font-semibold">AI-Powered Learning</h3>
+                <p className="text-sm opacity-90">
+                  Personalized courses generated by AI to match your learning style
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <Trophy className="h-8 w-8" />
+              <div>
+                <h3 className="font-semibold">Gamified Experience</h3>
+                <p className="text-sm opacity-90">
+                  Earn ranks, coins, and maintain streaks as you progress
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <Users className="h-8 w-8" />
+              <div>
+                <h3 className="font-semibold">Community Learning</h3>
+                <p className="text-sm opacity-90">
+                  Join a vibrant community of learners and share your knowledge
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

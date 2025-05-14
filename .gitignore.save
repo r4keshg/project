@@ -1,0 +1,8 @@
+node_modules/
+*.pem
+*.env
+git add .gitignore
+git commit -m "Add .gitignore to prevent secret leakage"
+git push
+
+

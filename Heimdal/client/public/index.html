@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heimdal • Visitor Signup</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Poppins for a modern, friendly tone -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Heimdal</h1>
+      <p class="subtitle">Visitor Signup</p>
+    </header>
+
+    <form class="grid-form" action="/signup" method="POST">
+      <label>
+        <span>Name</span>
+        <input name="name" type="text" required>
+      </label>
+      <label>
+        <span>PAN/Aadhaar</span>
+        <input name="pan_aadhar" type="text" required>
+      </label>
+      <label>
+        <span>Vehicle Type</span>
+        <input name="vehicle_type" type="text" required>
+      </label>
+      <label>
+        <span>Vehicle No.</span>
+        <input name="vehicle_no" type="text" required>
+      </label>
+      <label>
+        <span>In-Time</span>
+        <input name="intime" type="time" required>
+      </label>
+      <label>
+        <span>Duration (mins)</span>
+        <input name="duration" type="number" min="1" required>
+      </label>
+      <label>
+        <span>Date of Visit</span>
+        <input name="date_of_visit" type="date" required>
+      </label>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <footer>
+      <a href="login.html">Admin Login →</a>
+    </footer>
+  </div>
+</body>
+</html>

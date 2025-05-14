@@ -1,0 +1,283 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  background-color: #f7fafc; /* Equivalent to Tailwind's bg-gray-100 */
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2563eb; /* Tailwind blue-600 */
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: text-decoration 0.3s;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Main Container */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Card Styles */
+.card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  margin-bottom: 1rem;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-blue {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-blue:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-green {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+.btn-green:hover {
+  background-color: #15803d;
+}
+
+.btn-gray {
+  background-color: #6b7280;
+  color: #ffffff;
+}
+
+.btn-gray:hover {
+  background-color: #4b5563;
+}
+
+.btn-small {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.875rem;
+}
+
+/* Home Container */
+.home-container {
+  margin-bottom: 1.5rem;
+}
+
+/* Course Grid */
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .course-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Course Card */
+.course-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: box-shadow 0.3s;
+}
+
+.course-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.course-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.course-card-text {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card-link {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.course-card-link:hover {
+  text-decoration: underline;
+}
+
+.course-card-modules {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Styles */
+.create-course-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-textarea {
+  height: 100px;
+}
+
+/* Modules */
+.modules-container {
+  margin-top: 1rem;
+}
+
+.modules-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Module Card */
+.module-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.module-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.module-fields .form-group {
+  margin-bottom: 1rem;
+}
+
+/* Quiz Styles */
+.quiz-container {
+  margin-top: 1rem;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.quiz-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-options .form-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Submit Button */
+.submit-btn {
+  margin-top: 1rem;
+}

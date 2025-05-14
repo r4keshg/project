@@ -1,0 +1,112 @@
+VSkill Arena - Comprehensive Project Overview
+
+Overview
+
+VSkill Arena is a modern, interactive e-learning platform that integrates AI-driven course generation, gamified learning, and community engagement. It provides a structured and intuitive experience for users to learn, create courses, and engage with a learning community.
+
+Landing Page & Navigation
+
+Landing page features an AI-powered learning introduction, key highlights, testimonials, and an OTP-based signup/login.
+
+After login, users are redirected to Odyssey (Dashboard) as the default page.
+
+Footer is present on all pages, linking Odyssey (Dashboard) and Arena (AI Course Generator).
+
+Social media links (LinkedIn, GitHub, Instagram) are included in the footer.
+
+Odyssey (Dashboard) - User Hub & Gamification
+
+Displays user rank, coins, streaks, and progress insights.
+
+League-based ranking system with tiers: Beginner → Apprentice → Scholar → Master → Grandmaster.
+
+Confetti animations trigger on course completion, rank promotions, and weekly login after maintaining a streak.
+
+Displays enrolled courses, pending courses, and popular courses with progress tracking.
+
+Coins dynamically increase when earned and deduct when used.
+
+Course creation history section allows users to modify and reorganize AI-generated and manually created courses.
+
+Tribe highlights display trending discussions, memes, and blogs.
+
+Admin controls enable management of users, courses, analytics, and community moderation.
+
+Arena (AI Course Generator) - Course Creation & Exploration
+
+My Courses section shows enrolled courses with progress tracking and resumption options.
+
+Explore Courses includes a search bar, category sorting, and mandatory course tags for better filtering.
+
+Course Creation Space offers two ways to create courses:
+
+AI-Generated Courses using Gemini API or ChatGPT API (API key provided):
+
+Generates structured courses with modules, documentation, quizzes, and embedded YouTube videos.
+
+Progress tracker with tick marks for completed modules.
+
+Confetti animation on course completion.
+
+Manual Course Creation:
+
+Users input title, description, resources (YouTube links), and quizzes.
+
+Courses are structured chapter-wise, fully customizable, and editable by the creator.
+
+Mandatory tags for sorting courses in categories.
+
+Discussion Space includes threaded comments under each module, similar to Reddit replies.
+
+Course Visibility ensures newly created courses appear in Explore Courses and Arena Space for other users.
+
+Coin-Based System allows users to earn coins by completing courses and engaging in discussions, which are required to create new courses.
+
+Ongoing Courses section enables users to resume from where they left off.
+
+Tribe (Community & Blogs) - Engagement Hub
+
+Discussion Feed consists of Reddit-style community posts with likes, replies, and sharing.
+
+Meme Hub enables users to upload and share memes related to learning.
+
+Blog Space allows users to write blogs with images and links (attachment uploads enabled).
+
+Anonymous users can only view and react to posts, while registered users can create, modify, and interact.
+
+Tags are mandatory for creating posts, similar to Reddit communities, and allow filtering.
+
+Search bar in Tribe helps users find relevant content easily.
+
+Comments are threaded for organized discussions, and users can reply under each comment.
+
+Dedicated Blog Section is accessible via the footer.
+
+Navigation is fixed so that Tribe links directly to the Tribe page.
+
+Course Module Enhancements
+
+YouTube video integration allows course creators to embed YouTube links, making them accessible within the course.
+
+Each module is customizable, with added support for comments.
+
+Search bar & categories enable users to find and sort courses efficiently.
+
+Contact Us Page Fixes
+
+Update email address to graakaysh@gmail.com.
+
+Fix the Send Message button to properly send emails.
+
+Platform-wide Improvements
+
+Gamified learning with a reward-based ranking and coin system (no payments required).
+
+Confetti effects for major achievements, including course completion, rank promotions, and weekly login streaks.
+
+Modern UI/UX, smooth animations, and dynamic content updates for an engaging experience.
+
+Ensure full interactivity, scalability, and responsiveness for a seamless user experience.
+
+VSkill Arena functions as a free, AI-powered, gamified e-learning ecosystem, making learning more interactive and engaging for all users.
+

@@ -1,0 +1,16 @@
+# pack-refs with: peeled fully-peeled sorted 
+f11dd809203505dcedcd9c19c3866f96dfa2d29d refs/remotes/origin/alex-add-language
+aa623df58bd91dbbb62573684d83c63c0d188d3a refs/remotes/origin/alex-add-payments
+62507853e71c9a80cd11a2418be75d8d52771a9f refs/remotes/origin/alex-anthropic
+62876f91c8922f6b6f76aa9f4c8ca549112b4946 refs/remotes/origin/alex-chat-history
+163a29037faf5acbb9f4323b36e3d0cbade6c6bb refs/remotes/origin/alex-course-cats
+9ca49507f4ca5843bcb5d4b9aed49aae4222d1a6 refs/remotes/origin/alex-ensure-language-used
+4ba7513ee5cd7a88c52942084b45947ebc45116c refs/remotes/origin/alex-fix-layout-cache
+4d955cd07c6e7762d0570fe455f89170b3174249 refs/remotes/origin/alex-headline
+cfd3b598375a9b7be797904965185d406ed0a543 refs/remotes/origin/alex-move-to-ddc
+9ec6125f0eadcb6ffd031af04dfacb7bc7c91e29 refs/remotes/origin/alex-next-image
+0ec990aacee03bfe6067ab9c5fb8f7f777136c6a refs/remotes/origin/alex-try-gpt4-turbo
+2813f88833db2208540660fc0510f3a0c4156d0e refs/remotes/origin/alex-wikipedia-image
+c02d8b1027c9146b1f349ac6e19071ef83b8f16a refs/remotes/origin/master
+e01b542ed8de2efd3b5a01dac7e5fcc183789d3d refs/remotes/origin/next
+e0db7a11433d09fb2aba2255e28cbcbfbfb311d4 refs/remotes/origin/ocavue/deps

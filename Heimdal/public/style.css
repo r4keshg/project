@@ -1,0 +1,189 @@
+/* === Base Setup === */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f0f4f8;
+  color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Container === */
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 480px;
+}
+.container.small {
+  max-width: 360px;
+}
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #3f3d56;
+}
+.subtitle {
+  margin-top: 0.25rem;
+  font-weight: 300;
+  color: #6b7280;
+}
+
+/* === Grid Form === */
+.grid-form {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .grid-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.grid-form input,
+.grid-form select {
+  width: 100%;
+}
+
+
+/* === Button === */
+.btn {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: #5952d4;
+}
+
+/* === Footer === */
+footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #3f3d56;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #6c63ff;
+  font-weight: 500;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* ✅ Add margin so the container doesn’t go under navbar */
+.container {
+  margin-top: 80px;
+}
+
+
+/* Push down content after fixed navbar */
+.container {
+  margin-top: 80px;
+}
+
+
+/* === Admin Table === */
+table.admin-table {
+  border-collapse: collapse;
+  width: 95%;
+  margin: 2rem auto;
+}
+.admin-table th, .admin-table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.admin-table select, .admin-table button {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.admin-table .delete {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.admin-table .delete:hover {
+  background-color: #b91c1c;
+}
+body.dark {
+  background: #1f1f1f;
+  color: #f8f8f8;
+}
+
+body.dark .container {
+  background: #2c2c2c;
+  color: #eee;
+}
+
+body.dark .btn {
+  background: #818cf8;
+}
+
+body.dark .admin-table {
+  background: #2c2c2c;
+  color: #fff;
+}
+
+body.dark .admin-table th, 
+body.dark .admin-table td {
+  border-color: #444;
+}

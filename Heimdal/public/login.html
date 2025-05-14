@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Heimdal • Admin Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ✅ NAVBAR START -->
+  <nav class="navbar">
+    <div class="logo">🛡️ Heimdal</div>
+    <div class="nav-links">
+      <a href="/">Visitor Signup</a>
+      <a href="/login">Admin Login</a>
+      <button id="themeToggle">🌙</button>
+    </div>
+  </nav>
+  <!-- ✅ NAVBAR END -->
+
+  <div class="container small">
+    <header>
+      <h1>Heimdal</h1>
+      <p class="subtitle">Admin Login</p>
+    </header>
+
+    <form class="grid-form" action="/login" method="POST">
+      <label>
+        <span>Username</span>
+        <input name="username" type="text" required>
+      </label>
+      <label>
+        <span>Password</span>
+        <input name="password" type="password" required>
+      </label>
+      <button type="submit" class="btn">Log In</button>
+    </form>
+  </div>
+
+  <!-- ✅ Dark Theme Toggle Script -->
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
